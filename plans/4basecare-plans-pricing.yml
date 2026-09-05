@@ -1,0 +1,15 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.4basecare.com/genomic-tests
+plan_count: 0
+plans: []
+note: >-
+  4baseCare publishes no pricing of any kind. The genomic-tests page lists the full
+  product line - TARGT First, First Lite, Indiegene, Indiegene PRO, Absolute Plus,
+  First Liquid, Indiegene Liquid, First SoLiQ, Indiegene SoLiQ, Absolute SoLiQ,
+  HRD PARPredict and Germline+ - with no cost attached to any of them, and the site
+  carries no /pricing page. Tests are ordered by an oncologist through the Galens
+  portal or a partner lab rather than bought from a published rate card, and there
+  is no API product to price. Verified 2026-09-05: https://www.4basecare.com/genomic-tests
+  returned 200 with no pricing, and no pricing page exists in the sitemap
+  (https://www.4basecare.com/sitemap.xml, 32 URLs, 200).

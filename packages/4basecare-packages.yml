@@ -1,0 +1,58 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  unauthenticated registry metadata queries plus the 4baseCare GitHub organization
+  and website, 2026-09-05
+package_count: 0
+packages: []
+registries_probed:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=4basecare
+  status: 200
+  results: 0
+- registry: npm
+  query: https://registry.npmjs.org/4basecare
+  status: 404
+  results: 0
+- registry: pypi
+  query: https://pypi.org/pypi/4basecare/json
+  status: 404
+  results: 0
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/4basecare.json
+  status: 404
+  results: 0
+- registry: nuget
+  query: https://azuresearch-usnc.nuget.org/query?q=4basecare
+  status: 200
+  results: 0
+- registry: packagist
+  query: https://packagist.org/search.json?q=4basecare
+  status: 200
+  results: 0
+  note: matches returned were unrelated "basecore" packages, none first-party
+- registry: crates.io
+  query: https://crates.io/api/v1/crates?q=4basecare
+  status: 403
+  results: null
+  note: crates.io refused the unauthenticated query; not checked
+- registry: maven-central
+  query: https://search.maven.org/solrsearch/select?q=4basecare
+  status: 000
+  results: null
+  note: search.maven.org did not answer within the timeout; not checked
+source_code:
+- url: https://github.com/4basecare
+  repos: 6
+  note: >-
+    The 4baseCare GitHub organization publishes six repositories, five of them forks:
+    .github, metskipper (Python, fork), vcf_filteration (fork), RNA_Pipeline (fork),
+    Upload_Fastq_to_GCP (Python, fork) and Upload_to_GCP_Integrity_Check (fork).
+    All are internal bioinformatics pipeline tooling - RNA-seq processing, VCF
+    filtration, and FASTQ upload/MD5 integrity checking against Google Cloud Storage.
+    None is a client library, none wraps an API, and none carries a specification.
+    Latest push observed 2026-05-28.
+note: >-
+  No first-party client library or SDK exists in any public package registry, which
+  is consistent with the finding that 4baseCare publishes no public API. Recorded as
+  a checked zero, not an unchecked gap. No SDKs pointer is emitted.

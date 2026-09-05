@@ -1,0 +1,73 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.4basecare.com/indian-subcontinent
+note: >-
+  4baseCare publishes no machine-readable API contract, so none of the API-layer
+  standards below could be derived from a specification - each is recorded as
+  not-conformant on the basis that nothing is published, not on the basis of a
+  failed check. The genuine published compliance posture is laboratory accreditation
+  and data-protection statute, not API security certification, and it is recorded
+  that way.
+standards:
+- id: cap-laboratory-accreditation
+  conforms: true
+  scope: laboratory
+  evidence: >-
+    https://www.4basecare.com/indian-subcontinent - "Our CAP-accredited Dubai lab,
+    launched with Innovate Life Sciences-Fz-LLC, sets a global standard for quality
+    and precision in the Middle East." College of American Pathologists accreditation
+    of the Dubai laboratory.
+- id: gdpr
+  conforms: true
+  scope: data-protection
+  evidence: >-
+    https://www.4basecare.com/privacy-policy - "your data and information shall be
+    protected under the provisions of General Data Protection Regulation ("GDPR"),
+    Information Technology Act, 2000 and Information Technology (Reasonable Security
+    Practices and Procedures and Sensitive Personal Data or Information) Rules."
+- id: india-it-act-2000-spdi
+  conforms: true
+  scope: data-protection
+  evidence: >-
+    https://www.4basecare.com/privacy-policy - the policy is written against the
+    Information Technology Act, 2000 and the SPDI Rules, and defines Sensitive
+    Personal Data or Information by reference to them.
+- id: oauth2
+  conforms: false
+  evidence: no published specification or authentication documentation
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404 on all four company hosts
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no published specification
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on all four company hosts
+- id: fhir
+  conforms: false
+  evidence: >-
+    no FHIR Genomics Reporting or any HL7 surface found; clinical results are
+    delivered as PDF reports through the Galens portal, not as an exchange standard
+- id: hl7v2
+  conforms: false
+  evidence: no published interface engine, LIMS or EMR integration documentation found
+- id: ga4gh-htsget
+  conforms: false
+  evidence: >-
+    no GA4GH standard surface (htsget, refget, DRS, Beacon) found on any company
+    host; probed 2026-09-05
+domain_standard:
+  market: clinical genomics / precision oncology
+  candidates_probed:
+  - fhir-genomics-reporting
+  - hl7v2
+  - ga4gh-beacon
+  - ga4gh-drs
+  - ga4gh-htsget
+  declared: none
+  note: >-
+    Reward-only dimension. 4baseCare's market does have domain standards (HL7 FHIR
+    Genomics Reporting, GA4GH) but the company declares none in any published
+    contract, because it publishes no contract. This is an honest absence, not a
+    penalty.

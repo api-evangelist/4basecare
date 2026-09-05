@@ -64,5 +64,33 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-4baseCare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/4basecare
+4baseCare is a precision oncology company founded in 2018, headquartered in Bengaluru, India with
+operations in Singapore, that combines next-generation-sequencing comprehensive genomic profiling with
+AI-driven clinical decision support. Its portfolio spans the TARGT family of tissue, liquid-biopsy and
+dual-source (SoLiQ) panels, germline and HRD testing, the OncoTwin AI insights layer, a Global Cancer
+Diversity Atlas of 30,000+ genomic profiles, molecular tumor board support, and the Oncobuddy patient
+program. Results reach oncologists through the Galens web portal.
+
+## API surface
+
+**None published.** Probed 2026-09-05 across `4basecare.com`, `www.4basecare.com`, `api.4basecare.com`
+and `galens.4basecare.com`:
+
+- No OpenAPI/Swagger at any conventional path on any host (all 404).
+- No GraphQL endpoint, no MCP server, no A2A agent card, no `apis.json`, no `llms.txt`.
+- Every named `/.well-known/` path returned 404 on every host; the negative-control path also
+  returned 404, so none of these hosts is a catch-all responder and the zeros are real.
+- No first-party SDK in npm, PyPI, RubyGems, NuGet or Packagist.
+- No pricing and no documented rate limits.
+- `api.4basecare.com` answers 200 with the stock CodeIgniter "Welcome" page. It is the private
+  application backend for the Galens single-page app (`/Users/register`, `/Users/upload`,
+  `/Prospectus/save`, read from the published JS bundle) — not a developer API.
+- The [4baseCare GitHub organization](https://github.com/4basecare) holds six repositories, all
+  internal bioinformatics pipeline tooling (RNA pipeline, VCF filtration, FASTQ-to-GCP upload).
+  No client library, no specification.
+
+Recorded as `x-coverage: none / no-developer-program`.
+
+- https://www.4basecare.com/
+- https://galens.4basecare.com/
+- https://github.com/4basecare

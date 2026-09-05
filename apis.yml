@@ -1,17 +1,35 @@
 aid: 4basecare
 name: 4baseCare
-description: '4baseCare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: '4baseCare is a precision oncology company founded in 2018, headquartered
+  in Bengaluru, India with operations in Singapore, that combines next-generation-sequencing
+  comprehensive genomic profiling with AI-driven clinical decision support to personalize
+  cancer treatment. Its portfolio spans the TARGT family of tissue, liquid-biopsy and
+  dual-source (SoLiQ) panels, germline and HRD testing, the OncoTwin AI insights layer,
+  a Global Cancer Diversity Atlas of 30,000+ genomic profiles, molecular tumor board
+  support, and the Oncobuddy patient program. Clinical results and decision support
+  are delivered to oncologists through the Galens web portal at galens.4basecare.com.
+  The company is Illumina Accelerator backed and closed a Series B round in 2024. As
+  of the 2026-09-05 probe it publishes no developer program, no API documentation and
+  no machine-readable API contract; the only API-shaped host, api.4basecare.com, is
+  the private CodeIgniter application backend behind the Galens single-page app.'
+image: https://cdn.prod.website-files.com/68c7a1b38962ad22082ae3d4/6926b5f899d2743a3861d270_OpenGraph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
-- Company
+- Precision Oncology
+- Genomics
+- Healthcare
+- Cancer
+- Diagnostics
+- Artificial Intelligence
+- Life Sciences
+- Clinical Decision Support
+- Next Generation Sequencing
+- India
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,75 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/4basecare-domain-security.yml
 - type: Website
+  url: https://www.4basecare.com/
+- type: About
+  url: https://www.4basecare.com/about-us
+- type: Support
+  url: https://www.4basecare.com/contact-us
+- type: Blog
+  url: https://www.4basecare.com/knowledge-centre
+- type: TermsOfService
+  url: https://www.4basecare.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.4basecare.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/4basecare
+- type: x-ClinicianPortal
+  url: https://galens.4basecare.com/
+  name: Galens clinician portal (login-gated web app, not a developer portal)
+- type: x-Publications
+  url: https://www.4basecare.com/publications
+- type: Careers
+  url: https://www.4basecare.com/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/4basecare
+- type: x-EquityZen
   url: https://equityzen.com/company/4basecare
+- type: Packages
+  url: packages/4basecare-packages.yml
+- type: Plans
+  url: plans/4basecare-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/4basecare-rate-limits.yml
+- type: Conformance
+  url: conformance/4basecare-conformance.yml
+- type: Compliance
+  url: https://www.4basecare.com/indian-subcontinent
+  name: CAP-accredited laboratory (Dubai), NABL/EIAC quality marks
+- type: LLMsTxt
+  url: llms/4basecare-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    4baseCare ships clinical genomics as an end-user service - PDF genomic reports and
+    the login-gated Galens clinician web app - and has no developer program at all:
+    the sitemap's 32 URLs contain no developer, API or docs page, and the only
+    API-shaped host, api.4basecare.com, answers 200 with the stock CodeIgniter
+    "Welcome" page and 404s every spec, well-known and discovery path because it is
+    the private backend for the Galens single-page app, not a published API.
+  evidence:
+  - url: https://api.4basecare.com/
+    status: 200
+  - url: https://api.4basecare.com/openapi.json
+    status: 404
+  - url: https://api.4basecare.com/swagger.json
+    status: 404
+  - url: https://www.4basecare.com/sitemap.xml
+    status: 200
+  - url: https://www.4basecare.com/.well-known/agent-card.json
+    status: 404
+  - url: https://galens.4basecare.com/.well-known/security.txt
+    status: 404
+  - url: https://registry.npmjs.org/-/v1/search?text=4basecare
+    status: 200
+  checked: '2026-09-05'
+

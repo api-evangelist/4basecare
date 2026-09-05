@@ -1,0 +1,30 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.4basecare.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  7 10:31:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: galens.4basecare.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  7 08:14:48 2026 GMT
+  hsts: false
+- host: api.4basecare.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 25 08:14:43 2026 GMT
+  hsts: false
+  note: 'Private application backend for the Galens single-page app; not in apis.yml
+    hosts so the probe script did not reach it. Probed by hand 2026-09-05 with the
+    same openssl/HEAD method.'
+domains:
+- domain: 4basecare.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

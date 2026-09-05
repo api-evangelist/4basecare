@@ -1,0 +1,13 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.4basecare.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented, because no public API is documented. 4baseCare
+  publishes no developer portal, no API reference and no machine-readable contract;
+  the only API-shaped host, api.4basecare.com, is the private CodeIgniter backend
+  behind the Galens single-page app and serves no documentation. There is therefore
+  nothing to record - neither a documented limit nor an observed RateLimit-* /
+  X-RateLimit-* / Retry-After response header. Recorded as a checked zero.
