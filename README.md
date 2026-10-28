@@ -64,33 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-4baseCare is a precision oncology company founded in 2018, headquartered in Bengaluru, India with
-operations in Singapore, that combines next-generation-sequencing comprehensive genomic profiling with
-AI-driven clinical decision support. Its portfolio spans the TARGT family of tissue, liquid-biopsy and
-dual-source (SoLiQ) panels, germline and HRD testing, the OncoTwin AI insights layer, a Global Cancer
-Diversity Atlas of 30,000+ genomic profiles, molecular tumor board support, and the Oncobuddy patient
-program. Results reach oncologists through the Galens web portal.
+4baseCare is a precision oncology company founded in 2018, headquartered in Bengaluru, India with operations in Singapore, that combines next-generation-sequencing comprehensive genomic profiling with AI-driven clinical decision support to personalize cancer treatment. Its portfolio spans the TARGT family of tissue, liquid-biopsy and dual-source (SoLiQ) panels, germline and HRD testing, the OncoTwin AI insights layer, a Global Cancer Diversity Atlas of 30,000+ genomic profiles, molecular tumor board support, and the Oncobuddy patient program. Clinical results and decision support are delivered to oncologists through the Galens web portal at galens.4basecare.com. The company is Illumina Accelerator backed and closed a Series B round in 2024. As of the 2026-09-05 probe it publishes no developer program, no API documentation and no machine-readable API contract; the only API-shaped host, api.4basecare.com, is the private CodeIgniter application backend behind the Galens single-page app.
 
-## API surface
+**Areas:** Precision Oncology · Genomics · Healthcare · Cancer · Diagnostics · Artificial Intelligence · Life Sciences · Clinical Decision Support · Next-Generation Sequencing · India
 
-**None published.** Probed 2026-09-05 across `4basecare.com`, `www.4basecare.com`, `api.4basecare.com`
-and `galens.4basecare.com`:
+## 4baseCare on APIs.io
 
-- No OpenAPI/Swagger at any conventional path on any host (all 404).
-- No GraphQL endpoint, no MCP server, no A2A agent card, no `apis.json`, no `llms.txt`.
-- Every named `/.well-known/` path returned 404 on every host; the negative-control path also
-  returned 404, so none of these hosts is a catch-all responder and the zeros are real.
-- No first-party SDK in npm, PyPI, RubyGems, NuGet or Packagist.
-- No pricing and no documented rate limits.
-- `api.4basecare.com` answers 200 with the stock CodeIgniter "Welcome" page. It is the private
-  application backend for the Galens single-page app (`/Users/register`, `/Users/upload`,
-  `/Prospectus/save`, read from the published JS bundle) — not a developer API.
-- The [4baseCare GitHub organization](https://github.com/4basecare) holds six repositories, all
-  internal bioinformatics pipeline tooling (RNA pipeline, VCF filtration, FASTQ-to-GCP upload).
-  No client library, no specification.
+Everything profiled for 4baseCare is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/4basecare/](https://apis.io/providers/4basecare/)** — or go straight to one of the APIs or properties below.
 
-Recorded as `x-coverage: none / no-developer-program`.
+### Published properties
 
-- https://www.4basecare.com/
-- https://galens.4basecare.com/
-- https://github.com/4basecare
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [4Basecare Domain Security](https://apis.io/security/4basecare/4basecare-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [4Basecare Plans Pricing](https://apis.io/plans/4basecare/4basecare-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [4Basecare Rate Limits](https://apis.io/rate-limits/4basecare/4basecare-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.4basecare.com/)
+- [Support](https://www.4basecare.com/contact-us)
+- [Blog](https://www.4basecare.com/knowledge-centre)
+- [Compliance](https://www.4basecare.com/indian-subcontinent)
+- [Terms of service](https://www.4basecare.com/terms-of-use)
+- [Privacy policy](https://www.4basecare.com/privacy-policy)
+- [GitHub](https://github.com/4basecare)
+
+## API Evangelist rating
+
+**Kin Score 15.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 28.9 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/4basecare/](https://apis.io/providers/4basecare/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 4baseCare: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/4basecare/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
